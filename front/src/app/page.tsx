@@ -9,7 +9,6 @@ import Packages from '../components/Packages';
 import Testimonials from '../components/Testimonials';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
-import AdminPanel from '../components/AdminPanel';
 import { SalonData }from '../interfaces/ISalonData';
 import { defaultData } from '@/lib/data';
 
