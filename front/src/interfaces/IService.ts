@@ -1,5 +1,7 @@
 export interface Service {
-  icon: string;
+  category: string;
   name: string;
   desc: string;
+  features: string[];
+  image: string;
 }

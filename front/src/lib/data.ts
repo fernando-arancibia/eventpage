@@ -1,9 +1,9 @@
 import { SalonData } from "@/interfaces/ISalonData";
 
 export const defaultData: SalonData = {
-  siteName: '/subterra.jpg',
-  heroTitle: 'El Espacio Perfecto para tu Evento',
-  heroSubtitle: 'Celebra momentos inolvidables en un ambiente elegante y sofisticado',
+  siteName: '/subterra2.jpg',
+  heroTitle: 'EL ESPACIO PERFECTO',
+  heroSubtitle: 'Creamos experiencias únicas que superan las expectativas',
   phone: '947425842 / 995454155 / 995444870',
   email: 'info@salonevento.com',
   address: 'Calle Principal #123, Iquique',
@@ -16,12 +16,50 @@ export const defaultData: SalonData = {
     '/foto6.jpg',
   ],
   services: [
-    { icon: '🍽️', name: 'Catering Premium', desc: 'Menús personalizados con chef profesional' },
-    { icon: '🎵', name: 'Audio y Música', desc: 'Sistema de sonido profesional y DJ' },
-    { icon: '💡', name: 'Iluminación', desc: 'Diseño de iluminación ambiental personalizada' },
-    { icon: '📸', name: 'Fotografía', desc: 'Servicio fotográfico profesional incluido' },
-    { icon: '🎨', name: 'Decoración', desc: 'Ambientación temática a tu gusto' },
-    { icon: '🎨', name: 'Animacion', desc: 'Servicio  de animacion' },
+    {
+      category: 'EXPERIENCIAS PERFECTAS',
+      name: 'Eventos Corporativos',
+      desc: 'Lanzamientos de productos de alto impacto a almuerzos galardonados, brindamos los ingredientes logísticos más altos para representar su marca con estilo y manejar cada detalle con la confianza de un socio financiero de confianza.',
+      features: [
+        'De 10 a 500 asistentes sin esfuerzo',
+        'Gestión estratégica avanzada del evento',
+        'Catering de calidad gourmet con opciones de dieta',
+      ],
+      image: '/foto2.jpg',
+    },
+    {
+      category: 'BODAS BOUTIQUE',
+      name: 'Bodas',
+      desc: 'Para las parejas que buscan una boda excepcional en una ubicación o patio único, ofrecemos coordinación logística de primer nivel con una superposición impecable para la celebración que has soñado en tu lugar ideal.',
+      features: [
+        'Diseño de eventos a medida e innovador',
+        'Lugares únicos para eventos al aire libre',
+        'Coordinación integral del día',
+      ],
+      image: '/foto5.jpg',
+    },
+    {
+      category: 'CELEBRACIONES EXCEPCIONALES',
+      name: 'Fiestas Privadas',
+      desc: 'Ya sea un cumpleaños especial, aniversario o una pequeña fiesta festiva, aseguramos que su evento se desarrolle sin problemas y sea sobre las personas presentes.',
+      features: [
+        'Experiencias de entretenimiento seleccionadas',
+        'Diseño de iluminación ambiental y sonido',
+        'Estilo exclusivo de eventos de principio a fin',
+      ],
+      image: '/foto4.jpg',
+    },
+    {
+      category: 'EFICIENCIA OPERATIVA',
+      name: 'Galas y Recaudaciones',
+      desc: 'Para organizaciones que necesitan hacer una declaración, manejamos la preparación completa de eventos a gran escala, recaudaciones de fondos, subasta silenciosa y gestión de invitados. Todo administrado de manera eficiente y memorable.',
+      features: [
+        'Gestión de donantes y recaudación',
+        'Fotografía de eventos de alta gama y marketing',
+        'Apoyo acreditado para subasta silenciosa',
+      ],
+      image: '/foto6.jpg',
+    },
   ],
   packages: [
     { 

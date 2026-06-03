@@ -25,12 +25,26 @@ export default function Home() {
     try {
       const stored = localStorage.getItem('salonData');
       if (stored) {
-        setData(JSON.parse(stored));
+        const parsedData = JSON.parse(stored);
+        // Validar si tiene la estructura antigua y migrar
+        if (parsedData.services && parsedData.services.length > 0) {
+          const firstService = parsedData.services[0];
+          // Si tiene 'icon' en lugar de 'category', usar datos por defecto
+          if ('icon' in firstService) {
+            console.log('Migrando a nueva estructura de datos...');
+            await saveData(defaultData);
+            setData(defaultData);
+          } else {
+            setData(parsedData);
+          }
+        } else {
+          setData(parsedData);
+        }
       } else {
         await saveData(defaultData);
       }
     } catch (error) {
-      console.log('No previous data found, using defaults');
+      console.log('Error cargando datos, usando defaults:', error);
       await saveData(defaultData);
     } finally {
       setIsLoading(false);
@@ -63,7 +77,7 @@ export default function Home() {
       <Hero title={data.heroTitle} subtitle={data.heroSubtitle} />
       <Gallery images={data.gallery} />
       <Services services={data.services} />
-      <Testimonials testimonials={data.testimonials} />
+      
       <Contact
         phone={data.phone}
         email={data.email}

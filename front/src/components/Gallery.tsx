@@ -29,9 +29,9 @@ export default function Gallery({ images }: GalleryProps) {
   }, [currentIndex]);
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-display font-bold text-center mb-4 text-white">
+        <h2 className="text-3xl sm:text-4xl font-display font-bold text-center mb-4 text-primary">
           Nuestras Instalaciones
         </h2>
         <div className="w-20 h-1 bg-secondary mx-auto mb-12"></div>
@@ -53,18 +53,18 @@ export default function Gallery({ images }: GalleryProps) {
           {/* Botones de navegación */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all hover:scale-110"
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-primary/90 hover:bg-primary p-3 rounded-full shadow-lg transition-all hover:scale-110"
             aria-label="Anterior"
           >
-            <ChevronLeft className="w-6 h-6 text-primary" />
+            <ChevronLeft className="w-6 h-6 text-white" />
           </button>
           
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all hover:scale-110"
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-primary/90 hover:bg-primary p-3 rounded-full shadow-lg transition-all hover:scale-110"
             aria-label="Siguiente"
           >
-            <ChevronRight className="w-6 h-6 text-primary" />
+            <ChevronRight className="w-6 h-6 text-white" />
           </button>
 
           {/* Indicadores */}
@@ -76,7 +76,7 @@ export default function Gallery({ images }: GalleryProps) {
                 className={`w-3 h-3 rounded-full transition-all ${
                   index === currentIndex
                     ? 'bg-secondary w-8'
-                    : 'bg-white/50 hover:bg-white/80'
+                    : 'bg-primary/30 hover:bg-primary/60'
                 }`}
                 aria-label={`Ir a imagen ${index + 1}`}
               />
@@ -84,7 +84,7 @@ export default function Gallery({ images }: GalleryProps) {
           </div>
 
           {/* Contador */}
-          <div className="text-center mt-4 text-white/80 font-medium">
+          <div className="text-center mt-4 text-primary/80 font-medium">
             {currentIndex + 1} / {images.length}
           </div>
         </div>

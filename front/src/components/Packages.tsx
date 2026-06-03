@@ -19,7 +19,7 @@ export default function Packages({ packages }: PackagesProps) {
               key={index}
               className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-300"
             >
-              <div className="bg-gradient-to-br from-secondary to-accent p-8 text-center">
+              <div className="bg-linear-to-br from-secondary to-accent p-8 text-center">
                 <h3 className="text-2xl font-display font-bold text-primary mb-2">
                   {pkg.name}
                 </h3>

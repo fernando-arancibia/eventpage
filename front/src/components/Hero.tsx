@@ -1,36 +1,34 @@
+import Image from 'next/image';
+
 interface HeroProps {
   title: string;
   subtitle: string;
+  heroImage?: string;
 }
 
-export default function Hero({ title, subtitle }: HeroProps) {
+export default function Hero({ title, subtitle, heroImage = '/foto1.jpg' }: HeroProps) {
   return (
-    <section className="relative bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-white py-20 sm:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      {/* Decorative Background Elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-secondary rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
+    <section className="relative h-[70vh] sm:h-[80vh] flex items-center justify-center overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src={heroImage}
+          alt="Hero Background"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/50"></div>
       </div>
       
-      <div className="relative max-w-5xl mx-auto text-center">
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-6 animate-fadeInUp">
+      {/* Content */}
+      <div className="relative z-10 max-w-5xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-bold mb-6 text-white animate-fadeInUp">
           {title}
         </h1>
-        <p className="text-lg sm:text-xl lg:text-2xl max-w-3xl mx-auto opacity-95 animate-fadeInUp-delay">
+        <p className="text-lg sm:text-xl lg:text-2xl max-w-3xl mx-auto text-white/90 animate-fadeInUp-delay">
           {subtitle}
         </p>
-      </div>
-
-      {/* Decorative Bottom Wave */}
-      <div className="absolute bottom-0 left-0 right-0 overflow-hidden">
-        <div className="animate-wave flex" style={{ width: '200%' }}>
-          <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '50%' }}>
-            <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" fill="#f8f5f0"/>
-          </svg>
-          <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '50%' }}>
-            <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" fill="#f8f5f0"/>
-          </svg>
-        </div>
       </div>
     </section>
   );
