@@ -132,14 +132,17 @@ export default function GalleryPage() {
             >
               Solicitar Consulta
             </Link>
-            <button className="border-2 border-secondary text-secondary text-sm tracking-wider uppercase px-8 sm:px-10 py-4 hover:bg-secondary hover:text-white transition-all font-semibold">
+            <Link
+              href="/contact"
+              className="border-2 border-secondary text-secondary text-sm tracking-wider uppercase px-8 sm:px-10 py-4 hover:bg-secondary hover:text-white transition-all font-semibold"
+            >
               Contactanos
-            </button>
+            </Link>
           </div>
         </div>
       </section>
       </main>
-      <Footer siteName="/subterra2.jpg" />
+      <Footer siteName="facweb" />
     </>
   );
 }

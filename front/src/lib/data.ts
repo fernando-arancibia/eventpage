@@ -1,8 +1,8 @@
 import { SalonData } from "@/interfaces/ISalonData";
 
 export const defaultData: SalonData = {
-  siteName: '/subterra2.jpg',
-  heroTitle: 'EL ESPACIO PERFECTO',
+  siteName: 'DeliveryWeb',
+  heroTitle: 'TU ESPACIO PERFECTO',
   heroSubtitle: 'Creamos experiencias únicas que superan las expectativas',
   phone: '947425842 / 995454155 / 995444870',
   email: 'info@salonevento.com',
@@ -21,7 +21,7 @@ export const defaultData: SalonData = {
       name: 'Eventos Corporativos',
       desc: 'Lanzamientos de productos de alto impacto a almuerzos galardonados, brindamos los ingredientes logísticos más altos para representar su marca con estilo y manejar cada detalle con la confianza de un socio financiero de confianza.',
       features: [
-        'De 10 a 500 asistentes sin esfuerzo',
+        'Gran Capacidad de asistente',
         'Gestión estratégica avanzada del evento',
         'Catering de calidad gourmet con opciones de dieta',
       ],

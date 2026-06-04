@@ -3,11 +3,7 @@
 import { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
-import Gallery from '../components/Gallery';
 import Services from '../components/Services';
-import Packages from '../components/Packages';
-import Testimonials from '../components/Testimonials';
-import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import { SalonData }from '../interfaces/ISalonData';
 import { defaultData } from '@/lib/data';
@@ -75,23 +71,8 @@ export default function Home() {
     <main className="min-h-screen">
       <Header siteName={data.siteName} onOpenAdmin={() => setIsAdminOpen(true)} />
       <Hero title={data.heroTitle} subtitle={data.heroSubtitle} />
-      <Gallery images={data.gallery} />
       <Services services={data.services} />
-      
-      <Contact
-        phone={data.phone}
-        email={data.email}
-        address={data.address}
-        hours={data.hours}
-      />
       <Footer siteName={data.siteName} />
-      
-      {/*<AdminPanel
-        isOpen={isAdminOpen}
-        onClose={() => setIsAdminOpen(false)}
-        data={data}
-        onSave={saveData}
-      /> */}
     </main>
   );
 }
