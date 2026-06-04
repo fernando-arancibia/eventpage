@@ -1,7 +1,7 @@
 import { SalonData } from "@/interfaces/ISalonData";
 
 export const defaultData: SalonData = {
-  siteName: 'DeliveryWeb',
+  siteName: "/subterra2.jpg",
   heroTitle: 'TU ESPACIO PERFECTO',
   heroSubtitle: 'Creamos experiencias únicas que superan las expectativas',
   phone: '947425842 / 995454155 / 995444870',
