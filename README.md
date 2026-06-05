@@ -1,6 +1,6 @@
 # 🎉 Event Page
 
-Landing page para un salón de eventos, diseñada para presentar el espacio, destacar servicios y captar clientes potenciales.
+Landing page for an event venue, designed to showcase the space, highlight services, and attract potential clients.
 
 **Demo →** [eventpage-iota.vercel.app](https://eventpage-iota.vercel.app)
 
@@ -8,21 +8,21 @@ Landing page para un salón de eventos, diseñada para presentar el espacio, des
 
 ## Tech Stack
 
-- **TypeScript** — tipado estático para mayor robustez
-- **React** — componentes reutilizables y UI declarativa
-- **Lucide React** — iconografía moderna y ligera
-- **CSS** — estilos personalizados
-- **Vercel** — deploy continuo desde main
+- **TypeScript** — static typing for greater reliability
+- **React** — reusable components and declarative UI
+- **Lucide React** — modern and lightweight icon library
+- **CSS** — custom styling
+- **Vercel** — continuous deployment from main
 
-## Estructura
+## Structure
 
 ```
 eventpage/
-├── front/        # Código fuente React/TypeScript
+├── front/        # React/TypeScript source code
 └── package.json
 ```
 
-## Instalación local
+## Local Setup
 
 ```bash
 git clone https://github.com/fernando-arancibia/eventpage.git
@@ -31,12 +31,12 @@ npm install
 npm run dev
 ```
 
-## Características
+## Features
 
-- Diseño elegante orientado a conversión
-- Responsive para todos los dispositivos
-- Deploy automático en Vercel
+- Elegant, conversion-focused design
+- Fully responsive across all devices
+- Automatic deployment via Vercel
 
 ---
 
-Desarrollado por [Fernando Arancibia](https://github.com/fernando-arancibia)
+Developed by [Fernando Arancibia](https://github.com/fernando-arancibia)
